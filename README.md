@@ -85,16 +85,16 @@ May mắn là PM2.5 chỉ thiếu ~2%, nằm trong mức chấp nhận được.
 
 ### 3.2 Phân tích chuỗi PM2.5 theo thời gian
 
-#### Hình 1: PM2.5 toàn bộ giai đoạn (2013-2017)
-*(Cần tạo từ notebook preprocessing_and_eda.ipynb - vẽ line chart với trục X là thời gian, trục Y là PM2.5)*
+#### Phân tích PM2.5 toàn bộ giai đoạn (2013-2017)
+*Biểu đồ được tạo và phân tích trong notebook [preprocessing_and_eda.ipynb](notebooks/preprocessing_and_eda.ipynb)*
 
 **Nhận xét:**
 - **Xu hướng dài hạn**: PM2.5 có xu hướng giảm nhẹ qua các năm, cho thấy các biện pháp kiểm soát ô nhiễm của Bắc Kinh có hiệu quả
 - **Biến động theo mùa**: Mùa đông (tháng 12-2) thường có PM2.5 cao hơn, do đốt than sưởi ấm
 - **Có spike rất cao**: Đôi khi PM2.5 tăng vọt lên hàng trăm, thậm chí gần 1000 (rất nguy hiểm!). Đây là những đợt ô nhiễm nặng, thường xảy ra khi không có gió và mây mù bao phủ
 
-#### Hình 2: PM2.5 zoom vào 1-2 tháng (ví dụ: tháng 1/2017)
-*(Cần tạo từ notebook - vẽ line chart zoom vào khoảng 30-60 ngày)*
+#### Phân tích PM2.5 chi tiết theo tháng
+*Biểu đồ zoom vào khoảng 1-2 tháng được phân tích trong notebook [preprocessing_and_eda.ipynb](notebooks/preprocessing_and_eda.ipynb)*
 
 **Nhận xét:**
 - **Chu kỳ theo ngày**: Có thể thấy PM2.5 dao động theo ngày. Thường cao vào giờ cao điểm sáng và chiều (nhiều xe cộ), thấp vào ban đêm
@@ -113,10 +113,8 @@ Nói đơn giản, tự tương quan đo xem "PM2.5 hôm nay có giống PM2.5 h
 
 **Ý nghĩa**: Việc PM2.5 có tương quan cao với giờ trước đó chứng tỏ ta hoàn toàn có thể dùng các giá trị trong quá khứ để dự đoán tương lai. Đây là nền tảng cho cả mô hình hồi quy và ARIMA.
 
-#### Hình 3: ACF/PACF
-*(Cần tạo từ notebook arima_forecasting.ipynb)*
-
-![ACF PACF](reports/figures/acf_pacf_placeholder.png)
+#### Phân tích ACF/PACF
+*Biểu đồ ACF và PACF được tạo và phân tích chi tiết trong notebook [arima_forecasting.ipynb](notebooks/arima_forecasting.ipynb)*
 
 **Nhận xét:**
 - **ACF (Autocorrelation Function)**: Cho thấy tương quan giữa PM2.5 hiện tại với các giá trị trong quá khứ. ACF giảm dần cho thấy có "bộ nhớ" theo thời gian
