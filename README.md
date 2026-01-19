@@ -261,11 +261,20 @@ RMSE sẽ cao hơn MAE rất nhiều khi:
 ![Regression scatter](reports/figures/regression_scatter.png)
 
 **Nhận xét:**
+
+![Regression residuals](reports/figures/regression_residuals.png)
+
+**Nhận xét phân phối residual:**
+#### Hình 4: Scatter plot dự đoán vs thực tế
+
+**Xem biểu đồ tại**: [regression_modelling.ipynb - Cell 7](notebooks/regression_modelling.ipynb)
+
+**Nhận xét:**
 - Các điểm nằm gần đường y=x (đường đỏ) cho thấy dự đoán khá chính xác
 - Vùng trên phải (PM2.5 cao) có điểm phân tán nhiều hơn → Khó dự đoán với giá trị cao
 - Một số điểm lệch xa đường thẳng → Đó là các trường hợp dự đoán sai nhiều
 
-![Regression residuals](reports/figures/regression_residuals.png)
+**Xem biểu đồ phân phối phần dư tại**: [regression_modelling.ipynb - Cell 9](notebooks/regression_modelling.ipynb)
 
 **Nhận xét phân phối residual:**
 - Phần dư tập trung quanh 0 (đỉnh phân phối ở gần 0) → Tốt
@@ -392,6 +401,8 @@ Nếu phần dư còn có pattern → Mô hình chưa bắt hết cấu trúc �
 ### 5.3 Kết quả dự báo ARIMA
 
 ![ARIMA forecast window](reports/figures/arima_forecast_window.png)
+**Xem biểu đồ tại**: [arima_forecasting.ipynb - Cell 11](notebooks/arima_forecasting.ipynb)
+
 
 **Diễn giải biểu đồ:**
 - **Đường xanh (y_true)**: Giá trị PM2.5 thực tế
@@ -404,6 +415,8 @@ Nếu phần dư còn có pattern → Mô hình chưa bắt hết cấu trúc �
 3. **Khoảng tin cậy rộng dần**: Càng về sau, vùng cam càng rộng, cho thấy độ không chắc chắn tăng lên
 
 ![ARIMA metrics card](reports/figures/arima_metrics_card.png)
+**Xem chi tiết metrics tại**: [arima_forecasting.ipynb - Cell 11](notebooks/arima_forecasting.ipynb)
+
 
 **Kết quả đánh giá:**
 - RMSE: 104.10
